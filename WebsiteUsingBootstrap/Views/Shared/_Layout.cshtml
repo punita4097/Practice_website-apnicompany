@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebsiteUsingBootstrap</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <style>
+        .fa {
+  padding: 3px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+        
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+
+
+        ul {
+            padding: 0;
+            list-style: none;
+            /*background: #f2f2f2;*/
+            float: right;
+            margin-right: 40px;
+        }
+
+            ul li {
+                display: inline-block;
+                position: relative;
+                margin-right: 15px;
+                padding: 15px;
+                text-align: left;
+            }
+
+                ul li a {
+                    display: block;
+                    color: darkblue;
+                    font-size: 20px;
+                    font-family: Cambria;
+                    text-decoration: none;
+                }
+
+                    ul li a:hover {
+                        color: #fff;
+                        background: #939393;
+                        height: 60px;
+                    }
+
+                ul li ul.dropdown {
+                    min-width: 100%; /* Set width of the dropdown */
+                    background: #f2f2f2;
+                    display: none;
+                    position: absolute;
+                    z-index: 999;
+                    left: 0;
+                }
+
+                ul li:hover ul.dropdown {
+                    display: block;
+                    min-width: 100%; /* Display the dropdown */
+                }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow border-bottom box-shadow mb-3" style="height:120px;background-color:gainsboro">
+            <div class="container-fluid" style="padding:0;margin:0;">
+
+                <img src="~/Images/apple-app-store.png" />
+                <a class="navbar-brand" style="float:left;font-weight:600;color:darkblue;font-family:Cambria;font-size:40px;" asp-area="" asp-controller="Home" asp-action="Index">Apni Company</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link  text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Service">Services</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Service1">Cloud Migration Service</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Service2">Android App Development</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Service3">VPS Server Hosting</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Service4">Cloud Hosting</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Service5">Business Email Hosting</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Service6">Backup solutions</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Service7">Windows Virtual Desktop</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Service8">Web Development</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Service9">IOS App Development</a>
+                            </div>
+
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link  text-dark" asp-area="" asp-controller="Home" asp-action="Aboutus">About Us</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link  text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+        </nav>
+    </header>
+    <div class="container-fluid" style="padding:0;align-items:center">
+        @RenderBody()
+        @*<main role="main" class="pb-3">
+                @RenderBody()
+            </main>*@
+    </div>
+
+    <footer class="border-top footer text-muted" style="color:white">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2">
+                        <a style="color:azure;margin:10px;font-size:30px;font-weight:600" asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
+
+                    </div>
+                    <div class="col-md-3">
+                        <h4 style="color:azure;margin:10px;">Follow US</h4>
+
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+
+                        <br />
+                       
+                    </div>
+                    
+                    <div class="col-md-7">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.9502327992927!2d77.32017891436983!3d28.48104538247786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce70e37d0f945%3A0xfe6932bea12fe680!2sGali%20Number%2020%2C%20Saraswati%20Colony%2C%20Sehatpur%2C%20Faridabad%2C%20Haryana%20121013!5e0!3m2!1sen!2sin!4v1614169965897!5m2!1sen!2sin" width="65%" height="350" style="border-color:slategrey;border:double;margin:10px;float:right" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                        <p class="text-center" style="color:azure">&copy; Copyright 2021 - Apni Company.  All rights reserved.</p>
+
+                </div>
+        
+        </footer>
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
